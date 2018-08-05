@@ -10,9 +10,12 @@
 
 .App-header {
   background-color: #222;
-  height: 70px;
+  height: 56px;
   padding: 20px;
   color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .App-title {
@@ -23,9 +26,31 @@
   font-size: large;
 }
 
+.header-navigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+.header-navigation-items a: {
+  color: white;
+  text-decoration: none;
+}
+
+.header-navigation-items a:hover,
+.header-navigation-items a:active {
+  color: #fa923f;
+}
+
+
 /*remove bullet points from list of venues*/
 ul {
   list-style-type: none;
+}
+
+.places-list {
+  text-align: left;
 }
 /*
 @keyframes App-logo-spin {
