@@ -9,8 +9,8 @@ class Places extends Component {
 		})
 
 		return (
-		 <div className="list-title">
-		 	Venues:
+		 <div className="places-list">
+		 	<h3>Venues:</h3>
 		 <ul>
 		 	{list}
 		 </ul>
