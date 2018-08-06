@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Places from './Places';
+import Places from './Places.js';
 /*import '../App.css';*/
 
 class Header extends Component {
