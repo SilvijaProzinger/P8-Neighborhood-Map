@@ -1,8 +1,26 @@
 import React, { Component } from 'react';
 
 class Places extends Component {
+	constructor (){
+		super();
+		this.state = {
+			search: '',
+
+		};
+	}
+
+	updateSearch (event) {
+		this.setState({search: event.target.value});
+
+	}
 	render () {
-		const list = this.props.venues.map((venue, i) => {
+		let filteredList = this.props.venues.filter(
+			(venue) => {
+				return venue.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+			}
+
+		);
+		const list = filteredList.map((venue, i) => {
 			return (
 				<li key = {i}>{venue.name}</li>
 			) 
@@ -14,6 +32,9 @@ class Places extends Component {
 		 <ul>
 		 	{list}
 		 </ul>
+		 <div className="filter-box">
+		 <input type="text" value={this.state.search} onChange={this.updateSearch.bind(this)}/>
+		 </div>
 		 </div>
 
 		)
